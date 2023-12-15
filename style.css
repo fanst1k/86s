@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    height: 75%;
+    width: 95%;
+    background-size: cover;
+    background-position: center;
+    background: url(photo/background1.jpg) no-repeat;
+    background-color: rgb(24, 10, 42);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+header{
+    
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgb(12, 7, 20);
+        box-shadow: 0 5px 10px rgb(32, 17, 50);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5 5%;
+}
+header img{
+    width: 50;
+}
+header .logo{
+    font-family:sans-serif;
+    font-style: 20px;
+    font-size: 45px;
+    font-weight: 900;
+    color:rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px white;
+    transition: .5s;
+}
+header .logo:hover{
+    transform:scale(1.2);   
+}
+header nav ul li{
+    position:relative;
+    float:left;
+}
+header nav ul li a{
+    padding: 20px;
+    color:white;
+    font-size: 17px;
+    display: block;
+    font-weight: 900;
+}
+header nav ul li a:hover{
+    background-color: rgb(112, 16, 16);
+    color:white;    
+}
+.menu {
+    position: relative;
+    width: 40px;
+    height: 35px;
+    background: transparent;
+    cursor: pointer;
+}
+input[type=checkbox] {
+    display: none;
+}
+.menu span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    transition: .5s;
+}
+.menu span:nth-child(1) {
+    top: 0;
+    transform-origin: left center;
+}
+.menu span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+}
+
+.menu span:nth-child(3) {
+    top: 100%;
+    transform: translateY(-100%);
+    transform-origin: left center;
+}
+
+input:checked ~ label span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 0;
+    left: 10px;
+}
+
+input:checked ~ label span:nth-child(2) {
+    width: 0;
+    opacity: 0;
+}
+
+input:checked ~ label span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 10px;
+}
+
+header label {
+    display: none;
+}
+
+@media(max-width:991px) {
+    header {
+        padding: 20px;
+    }
+
+    header nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgb(12, 7, 20);
+        border: 1px solid rgb(32, 17, 50);
+        display: none;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+    header label {
+        display: initial;
+    }
+    #menu:checked ~ nav {
+        display: initial;
+    }
+        .textcols {
+        grid-template-columns: 1fr 1fr;
+        }
+}
+
+.vrivaysya{
+    margin-top:190px;
+    margin-left: 65px;
+    max-width: 500px;
+    font-family:sans-serif;
+    font-style: 20px;
+    font-size: 45px;
+    font-weight: 900;
+    color:white;
+}
+.about{
+    margin-top:10px;
+    margin-left:95px;
+    max-width: 600px;
+    text-align: justify;
+    font-family:sans-serif;
+    font-style: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    color:white;
+}
+.plusi{
+    margin-top:300px;
+    margin-left: 65px;
+    font-family:sans-serif;
+    font-style: 20px;
+    font-size: 75px;
+    font-weight: 900;
+    color:white;
+    text-align: center;   
+}
+
+@media only screen and (max-width: 1200px) {
+    .plusi {
+        margin-top: -15%;
+        font-size: 55px;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    .plusi {
+        margin-top: -35%;
+        font-size: 45px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    #textplus {
+        font-size: 10px;
+        max-width: 350;
+    }
+}
+.textcols {  
+        white-space: nowrap;
+        font-size: 0;
+}
+.textcols-item {
+	white-space: normal;	
+	display: inline-block;
+	width: 45%;
+	vertical-align: top;
+	margin-right: 5%;
+}
+@media (max-width: 991px) {
+    .textcols-item {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5%;
+    }
+}
+.textcols .textcols-item:last-child {
+	margin-right: 0 ;
+}
+#textplus{
+    margin-top:0px;
+    margin-left: 55px;
+    max-width: 500  ;
+    font-family:sans-serif;
+    font-style: 20px;
+    font-size: 15px;
+    font-weight: 900;
+    color:white;
+    text-align: justify;
+}
+@media only screen and (max-width: 1200px) {
+    #textplus {
+        font-size: 15px;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    #textplus {
+        font-size: 10px;
+        max-width: 350;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    #textplus {
+        font-size: 10px;
+        max-width: 350;
+    }
+}
+#plus1{
+    margin-top:20px;
+    margin-left: 85px;
+    margin-bottom: 30px;
+    max-width: 550;
+    font-family:sans-serif;
+    font-style: 20px;
+    font-size: 25px;
+    font-weight: 900;
+    color:white;
+    text-align: justify;
+}
+@media only screen and (max-width: 1200px) {
+    #plus1 {
+        font-size: 25px;
+        margin-left:50px;
+
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    #plus1 {
+        font-size: 20px;
+        margin-left:50px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    #plus1 {
+        font-size: 20px;
+        margin-left:50px;
+    }
+}
+#imgplus{
+    height: 8%;
+    width:  8%;
+}
+
+.videoo{
+    width: 38%;
+    height: 43.5%;
+    margin-top: -14.5%;
+    margin-left: 60.8%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+@media only screen and (max-width: 1200px) {
+    .videoo {
+        margin-top: 0%;
+        width: 100%;
+        height: 190%;
+        margin-left: 2.5%;
+        overflow: hidden;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    .videoo {
+        margin-top: -10%;
+        width: 90%;
+        height: 190%;
+        margin-left: 10%;
+        overflow: hidden;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .videoo {
+        margin-top: -58%;
+        width: 90%;
+        height: 190%;
+        margin-left: 10%;
+        overflow: hidden;
+    }
+}
+footer {
+    background-color: rgb(12, 7, 20);
+    padding: 20px;
+    color:white;
+    margin-right: -5.1%;
+  }
+.footertext{
+    margin-top: 1%;
+    text-align: center;
+}
+
+
+
+
+
+

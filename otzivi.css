@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    height: 75%;
+    width: 95%;
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(24, 10, 42);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+header{
+    
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgb(12, 7, 20);
+        box-shadow: 0 5px 10px rgb(32, 17, 50);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5 5%;
+}
+header img{
+    width: 50;
+}
+header .logo{
+    font-family:sans-serif;
+    font-style: 20px;
+    font-size: 45px;
+    font-weight: 900;
+    color:rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px white;
+    transition: .5s;
+}
+header .logo:hover{
+    transform:scale(1.2);   
+}
+header nav ul li{
+    position:relative;
+    float:left;
+}
+header nav ul li a{
+    padding: 20px;
+    color:white;
+    font-size: 17px;
+    display: block;
+    font-weight: 900;
+}
+header nav ul li a:hover{
+    background-color: rgb(112, 16, 16);
+    color:white;    
+}
+.menu {
+    position: relative;
+    width: 40px;
+    height: 35px;
+    background: transparent;
+    cursor: pointer;
+}
+input[type=checkbox] {
+    display: none;
+}
+.menu span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    transition: .5s;
+}
+.menu span:nth-child(1) {
+    top: 0;
+    transform-origin: left center;
+}
+.menu span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+}
+
+.menu span:nth-child(3) {
+    top: 100%;
+    transform: translateY(-100%);
+    transform-origin: left center;
+}
+
+input:checked ~ label span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 0;
+    left: 10px;
+}
+
+input:checked ~ label span:nth-child(2) {
+    width: 0;
+    opacity: 0;
+}
+
+input:checked ~ label span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 10px;
+}
+
+header label {
+    display: none;
+}
+
+@media(max-width:991px) {
+    header {
+        padding: 20px;
+    }
+
+    header nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgb(12, 7, 20);
+        border: 1px solid rgb(32, 17, 50);
+        display: none;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+    header label {
+        display: initial;
+    }
+    #menu:checked ~ nav {
+        display: initial;
+    }
+        .textcols {
+        grid-template-columns: 1fr 1fr;
+        }
+}
+#active{
+    background-color: rgb(112, 16, 16);
+    color:white;
+}
+.testimonials{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2% 3%;
+}
+.testimonials .content{
+    flex: 1 1 40%;
+    padding: 0 5%;
+}
+.testimonials .content h2{
+    margin-top: 15%;
+    font-size: 300%;
+    font-weight: 900;
+    color:white;
+    text-align:center;
+    margin-bottom: 5%;
+}
+.testimonials .content p{
+    font-size: 130%;
+    color:white;
+    margin-bottom: 5%;
+    text-align: justify;
+    font-weight: 900;
+}
+.testimonials .testimonial-container{
+    flex: 1 1 40%;
+    padding: 0 5%;
+}
+.testimonials .testimonial-container .box {
+    background: rgb(255,0,0);
+    margin: 10% 0%;
+    padding: 5% 5%;
+    border-radius: 2%;
+    transition: 0.5s;
+}
+.testimonials .testimonial-container .box:hover{
+    transform: translateY(-0.8%);
+}
+.testimonials .testimonial-container .box p{
+    color: white;
+    font-size: 150%;
+    margin-bottom: 5%;
+    font-weight: 600;
+}
+.testimonials .testimonial-container .box .person{
+    display: flex;
+    align-items: center;
+}
+.testimonials .testimonial-container .box .img{
+    width: 15%;
+    height: 15%;
+    margin-right: 10%;
+}
+.testimonials .testimonial-container .box .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.testimonials .testimonial-container .box .author{
+    font-size: 150%;
+    font-weight: 900;
+    color: white;
+
+}
+
+footer {
+    background-color: rgb(12, 7, 20);
+    padding: 20px;
+    color:white;
+    margin-right: -5.1%;
+  }
+.footertext{
+    margin-top: 1%;
+    text-align: center;
+}
